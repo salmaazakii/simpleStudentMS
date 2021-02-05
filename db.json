@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Ahmed Mohamed",
+      "age": 16,
+      "Phone": 1023456789
+    },
+    {
+      "id": 2,
+      "name": "Sarah Ahmed",
+      "age": 17,
+      "Phone": 1546378289
+    },
+    {
+      "id": 3,
+      "name": "Fatima Nosier",
+      "age": 19,
+      "Phone": 1023463789
+    },
+    {
+      "id": 4,
+      "name": "Salma",
+      "age": 23,
+      "phone": 1007650114
+    },
+    {
+      "id": 5,
+      "name": "Ahmed ahmed",
+      "age": 30,
+      "phone": 1234567893
+    },
+    {
+      "id": 6,
+      "name": "Samir Ahmed",
+      "age": 40,
+      "phone": 1207754725
+    },
+    {
+      "id": 7,
+      "name": "Amira Ahmed",
+      "age": 20,
+      "phone": 12343212345
+    }
+  ]
+}

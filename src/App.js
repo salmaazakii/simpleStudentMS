@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NotFound from './components/notFound';
+import Home from './components/home';
+import StudentDetails from './components/studentDetails'
+import promiseMiddleware from 'redux-promise';
 
-function App() {
+const createStoreWithMW = applyMiddleware(promiseMiddleware)(createStore)
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={createStoreWithMW(reducers)} >
+      <BrowserRouter>
+        <Switch>
+          <Route path="/students/:id" component={StudentDetails} />
+          <Route exact path="/" component={Home} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
